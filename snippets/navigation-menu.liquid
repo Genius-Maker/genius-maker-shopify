@@ -1,0 +1,25 @@
+<ul class="navigation__list list-unstyle" role="list">
+    {% for link in linklist.links %}
+        {% if link.links != blank %}
+            <li class="navigation__list-item dropdown"><a href="{{ link.url }}">{{ link.title }}</a>
+            <ul>
+                {% for child in link.links %}
+                    {% if child.links != blank %}
+                        <li class="navigation__list-item dropdown"><a href="{{ child.url }}">{{ child.title }}</a>
+                        <ul>
+                            {% for grand_child in child.links %}
+                                <li class="navigation__list-item"><a href="{{ grand_child.url }}">{{ grand_child.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% else %}
+                        <li class="navigation__list-item"><a href="{{ child.url }}">{{ child.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            </li>
+        {% else %}
+        <li class="navigation__list-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,59 @@
+{% liquid
+  assign full_width_section = section.settings.full_width_section
+  assign logo = section.settings.logo
+  assign logo_width = section.settings.logo_width | divided_by: 16.0 | append: "rem"
+  assign menu = section.settings.menu
+%}
+
+<div class="header">
+    <div class="header__inner {% if full_width_section %}page-width--full{% else %}page-width{% endif %}">
+        <div class="header__logo">
+            {% if logo != blank %}
+                {{ logo | image_url: width: logo_width | image_tag  }}
+            {% else %}
+                <h2>{{ shop.name }}</h2>
+            {% endif %}
+        </div>
+
+        <nav class="header__navigation">
+            {% render 'navigation-menu', linklist: menu %}
+        </nav>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Header",
+    "enabled_on": {"groups": ["header"]},
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "range",
+            "id": "logo_width",
+            "label": "Logo width",
+            "min": 32,
+            "max": 320,
+            "step": 2,
+            "unit": "px",
+            "default": 84
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu",
+            "default": "main-menu"
+        },
+        {
+            "type": "checkbox",
+            "id": "full_width_section",
+            "label": "Enable full width section",
+            "default": false
+        }
+    ],
+    "blocks": []
+}
+{% endschema %}
