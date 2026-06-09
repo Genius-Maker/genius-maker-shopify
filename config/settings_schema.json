@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Layout",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "Page width",
+        "min": 1200,
+        "max": 1920,
+        "step": 10,
+        "default": 1200,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "page_padding_mobile",
+        "label": "Page padding mobile",
+        "min": 0,
+        "max": 80,
+        "step": 4,
+        "default": 32,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "page_padding_desktop",
+        "label": "Page padding desktop",
+        "min": 0,
+        "max": 160,
+        "step": 4,
+        "default": 80,
+        "unit": "px"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Main colors"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Button colors"
+      },
+      {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button background color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button text color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_background_color",
+        "label": "Button hover background color",
+        "default": "#95BF47"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_text_color",
+        "label": "Button hover text color",
+        "default": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Choose font family"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_family_body",
+        "label": "Font family body",
+        "default": "sans-serif"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_family_heading",
+        "label": "Font family heading",
+        "default": "sans-serif"
+      }
+    ]
+  }
+]

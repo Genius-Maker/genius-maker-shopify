@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% render 'theme-style-variables' %}
+    {% render 'javascript-files' %}
+    {% render 'font-preload' %}
     <title>{{ page_title }}</title>
     {{ content_for_header }}
 </head>
 <body>
-    <main>
+    <main id="main" tabindex="1">
         {% sections "header-group" %}
         {{ content_for_layout }}
         {% sections "footer-group" %}

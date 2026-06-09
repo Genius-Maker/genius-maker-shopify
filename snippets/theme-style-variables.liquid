@@ -1,0 +1,18 @@
+<style>
+    :root {
+        --page-width: calc({{ settings.page_width }} / 16 * 1rem);
+        --page-padding-mobile: calc({{ settings.page_padding_mobile }} / 16 * 1rem);
+        --page-padding-desktop: calc({{ settings.page_padding_desktop }} / 16 * 1rem);
+
+        --background-color: {{ settings.background_color.red }}, {{ settings.background_color.green }}, {{ settings.background_color.blue }};
+        --text-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+        --button-background-color: {{ settings.button_background_color.red }}, {{ settings.button_background_color.green }}, {{ settings.button_background_color.blue }};
+        --button-text-color: {{ settings.button_text_color.red }}, {{ settings.button_text_color.green }}, {{ settings.button_text_color.blue }};
+        --button-hover-background-color: {{ settings.button_hover_background_color.red }}, {{ settings.button_hover_background_color.green }}, {{ settings.button_hover_background_color.blue }};
+        --button-hover-text-color: {{ settings.button_hover_text_color.red }}, {{ settings.button_hover_text_color.green }}, {{ settings.button_hover_text_color.blue }};
+
+        --font-family-body: {{ settings.font_family_body.family }}, {{ settings.font_family_body.fallback_families }};
+        --font-family-heading: {{ settings.font_family_heading.family }}, {{ settings.font_family_heading.fallback_families }};
+        
+    }
+</style>
