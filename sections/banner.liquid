@@ -1,0 +1,40 @@
+{% liquid
+    assign full_width_section = section.settings.full_width_section
+    assign banner_image = section.settings.banner_image
+%}
+
+<div class="banner">
+    <div class="banner__inner {% if full_width_section %}page-width--full{% else %}page-width{% endif %}">
+        <div class="banner_image-wrapper">
+            {% if banner_image %}
+            {{ banner_image | image_url: width: banner_image.width | image_tag  }}
+            {% else %}
+                {{ 'hero-apparel-1' | placeholder_svg_tag }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "banner_image",
+            "label": "Banner image"
+        },
+        {
+            "type": "checkbox",
+            "id": "full_width_section",
+            "label": "Enable full width",
+            "default": false
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner"
+        }
+    ]
+}
+{% endschema %}

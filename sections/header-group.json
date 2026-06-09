@@ -1,5 +1,5 @@
 {
-  "type": "header-group",
+  "type": "header",
   "name": "Header Group",
   "sections": {
     "header": {
@@ -11,5 +11,5 @@
       "settings": {}
     }
   },
-  "order": ["header", "announcement-bar"]
+  "order": ["announcement-bar", "header"]
 }

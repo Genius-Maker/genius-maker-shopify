@@ -187,6 +187,10 @@ table {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .mb-16 {
   margin-block-end: 1rem;
 }

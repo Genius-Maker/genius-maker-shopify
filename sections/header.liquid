@@ -1,7 +1,7 @@
 {% liquid
   assign full_width_section = section.settings.full_width_section
   assign logo = section.settings.logo
-  assign logo_width = section.settings.logo_width | divided_by: 16.0 | append: "rem"
+  assign logo_width = section.settings.logo_width
   assign menu = section.settings.menu
 %}
 
@@ -37,9 +37,9 @@
             "label": "Logo width",
             "min": 32,
             "max": 320,
-            "step": 2,
+            "step": 8,
             "unit": "px",
-            "default": 84
+            "default": 80
         },
         {
             "type": "link_list",

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {}
+    },
+    "richtext": {
+      "type": "richtext",
+      "settings": {}
+    }
+  },
+  "order": ["banner", "richtext"]
+}
